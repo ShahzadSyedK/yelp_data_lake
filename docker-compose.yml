@@ -1,0 +1,8 @@
+# version: '3'
+services:
+  yelp_data_lake:
+    build: .
+    container_name: yelp_data_lake
+    volumes:
+      - ./data:/app/data
+    command: python3 main.py build
